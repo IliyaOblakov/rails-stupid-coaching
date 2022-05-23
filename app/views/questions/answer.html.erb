@@ -1,0 +1,13 @@
+<div class="container">
+    <%if params[:answer].include?("?") %>
+    <p><%=params[:answer]%></p>
+    <p><%= "Silly question, get dressed and go to work!" %></p>
+    <% elsif params[:answer] == "I am going to work!" %>
+    <p><%=params[:answer]%></p>
+    <p><%= " Great!" %></p>
+    <% else %>
+    <p><%=params[:answer]%></p>
+    <p><%= "I don't care, get dressed and go to work!"  %></p>
+    <% end %>
+    <%= link_to "Ask another question!", "/ask" %>
+</div>
